@@ -54,9 +54,9 @@
 					<h2>Setting the Stage</h2>
 					<ul>
 						<p>Imagine this scenario</p>
-						<li>Large, multidisciplinary research project or learning environment</li>
-						<li>Participants and colleagues scattered across non-geographically contiguous areas</li>
-						<li>Non-standard configurations of computing resources</li>
+						<li class="fragment roll-in">Large, multidisciplinary research project or learning environment</li>
+						<li class="fragment roll-in">Participants and colleagues scattered across non-geographically contiguous areas</li>
+						<li class="fragment roll-in">Non-standard configurations of computing resources</li>
 
 					<aside class="notes"><p>
 					* Analytics and data processing tools may fluctuate
@@ -79,8 +79,8 @@
 				<section>
 					<h3>What is Infrastructure as Code?</h3>
 					<ul>
-						<li>Programmatically automate infrastructure tasks</li>
-						<li>Infrastructure - Hardware, Servers, Monitoring and Analytics Software, and more</li>
+						<li class="fragment roll-in">Programmatically automate infrastructure tasks</li>
+						<li class="fragment roll-in">Infrastructure - Hardware, Servers, Monitoring and Analytics Software, and more</li>
 
 					<aside class="notes"><p>IaC originates from DevOps, a software development strategy that integrates software developers and operations staff</p></aside>
 				</section>
@@ -96,10 +96,10 @@
 
 				<section>
 					<ul>
-						<li>Extend the IaC model to include development tools and libraries</li>
-						<li>Less support headaches, quickly onboard new contributors or learners</li>
-						<li>Customize to your specific needs - target specific versions and lock</li>
-						<li>Write Once, Run Anywhere - deploy locally or in the cloud</li>
+						<li class="fragment roll-in">Extend the IaC model to include development tools and libraries</li>
+						<li class="fragment roll-in">Less support headaches, quickly onboard new contributors or learners</li>
+						<li class="fragment roll-in">Customize to your specific needs - target specific versions and lock</li>
+						<li class="fragment roll-in">Write Once, Run Anywhere - deploy locally or in the cloud</li>
 					</ul>
 				</section>
 
@@ -107,12 +107,12 @@
 					<h2>The Foundations of PaC</h2>
 					<ul>
 						<li>vagrant</li>
-							<ul>
+							<ul class="fragment roll-in">
 								<li>Manage and provision virtualized development environments</li>
 								<li>Simple configuration, easy to share files between host and client OS</li>
 								</ul>
 						<li>puppet</li>
-							<ul>
+							<ul class="fragment roll-in">
 								<li>Flexible and customizable automation framework</li>
 								<li>Declarative, model-based approach to define the desired state of an environment</li>
 								</ul>
@@ -122,6 +122,31 @@
 
 				<section>
 					<h2>Getting Started</h2>
+					<p>Download Vagrant at <code>http://www.vagrantup.com/downloads.html</code></p>
+					<p>Find a Vagrantbox at <code>https://vagrantcloud.com/discover/featured</code></p>
+				</section>
+
+				<section>
+					<h4>Initial Setup</h4>
+					<br>
+					<code>mkdir vagrant</code><br>
+					<code>cd vagrant</code><br>
+					<code>vagrant box add hashicorp/precise32</code><br>
+					<code>vagrant init</code><br>
+					<br>
+					<code>mkdir vagrant/manifests</code><br>
+					<code>touch vagrant/manifests/default.pp</code><br>
+	
+				</section>
+
+				<section>
+					<h3>Final Notes</h3>
+					<ul>
+						<li class="fragment roll-in">Performance may be an issue, but you can deploy to the cloud</li>
+						<li class="fragment roll-in">VMWare user? You're in luck.</li>
+						<li class="fragment roll-in">Puppet and Vagrant are much deeper than what we've seen today</li>
+					</ul>
+					<aside class="notes">merssene prime gen on 384mb 1 core vbox to 4423 (140s), (54s) otherwise. google, aws have plugins. you can also tweak boxes to allocate more resources. vmware and other popular commercial virtualization packages work as well. vagrant and puppet are incredibly powerful as web tools - puppet a dev server w/your serverside extensions, work locally, preview. you can even share that vagrant through the internet and vagrant share</aside>
 				</section>
 
 				<section>
@@ -146,7 +171,7 @@
 				center: true,
 
 				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+				transition: Reveal.getQueryHash().transition || 'fade', // default/cube/page/concave/zoom/linear/fade/none
 
 				// Parallax scrolling
 				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
